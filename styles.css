@@ -1,0 +1,56 @@
+body {
+    background: #000; /* Black background */
+    font-family: 'Arial', sans-serif;
+    color: #fff; /* White text color */
+}
+
+.menu {
+    background: #1a1a1a; /* Dark grey background for the menu */
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+}
+
+h1, h2, h3 {
+    color: #ffd700; /* Gold color for headings */
+}
+
+.menu-title {
+    padding-bottom: .5rem;
+    border-bottom: 3px solid #ffd700; /* Gold underline for section titles */
+    margin-bottom: 1rem;
+}
+
+.menu-item {
+    display: flex;
+    justify-content: space-between;
+    padding: .5rem 0;
+}
+
+.price {
+    font-weight: bold;
+}
+
+.hidden {
+    display: none;
+}
+
+.toggle-button {
+    background: none;
+    border: none;
+    color: #ffd700; /* Gold color to match the headings */
+    font-size: 1.5em; /* Adjust the size as needed */
+    cursor: pointer;
+}
+
+.menu-title.mb-3 {
+    margin-bottom: 1rem; /* Adjust as needed */
+}
+
+.menu-category .toggle-button {
+    transition: transform 0.3s ease; /* Smooth transition for the transform */
+}
+
+.menu-category .toggle-button.closed {
+    transform: rotate(-180deg); /* Arrow points up when menu is closed */
+}
