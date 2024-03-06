@@ -22,7 +22,7 @@ h1, h2, h3 {
 }
 
 .menu-item {
-    display: flex;
+    display: none;
     justify-content: space-between;
     padding: .5rem 0;
 }
@@ -32,7 +32,7 @@ h1, h2, h3 {
 }
 
 .hidden {
-    display: none;
+    display: flex;
 }
 
 .toggle-button {
