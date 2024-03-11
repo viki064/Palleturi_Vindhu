@@ -1,56 +1,226 @@
+/* Primary color */
+:root {
+  --primary-color: rgba(255, 165, 0, 0.8); /* Transparent orange */
+}
+
+/* General styles */
 body {
-    background: #000; /* Black background */
-    font-family: 'Arial', sans-serif;
-    color: #fff; /* White text color */
+  font-family: Arial, sans-serif;
+  background-color: #fff7e6; /* Light orange background */
+  color: #333; /* Dark gray text color */
+  padding-top: 68px; /* Adjust the value based on your navbar height */
 }
 
-.menu {
-    background: #1a1a1a; /* Dark grey background for the menu */
-    padding: 20px;
-    border-radius: 5px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.5);
+/* Customize scrollbar for better user experience in body */
+body::-webkit-scrollbar {
+  width: 8px; /* Optimal width for better usability */
 }
 
-h1, h2, h3 {
-    color: #ffd700; /* Gold color for headings */
+/* Track styles */
+body::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Subtle track color for easy visibility */
 }
 
-.menu-title {
-    padding-bottom: .5rem;
-    border-bottom: 3px solid #ffd700; /* Gold underline for section titles */
-    margin-bottom: 1rem;
+/* Handle styles */
+body::-webkit-scrollbar-thumb {
+  background: #888; /* Contrasting handle color for better visibility */
+  border-radius: 6px; /* Slightly rounded corners for modern aesthetics */
+}
+
+/* Handle on hover */
+body::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); /* Darker handle color on hover for interactivity */
+}
+
+
+.container {
+  text-align: center;
+}
+
+.categories {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 100%; /* Ensure the container doesn't exceed the viewport width */
+  overflow-x: hidden; /* Hide horizontal overflow */
+  margin-top: 20px;
+}
+
+.category {
+  width: calc(50% - 20px); /* Two categories per row on smaller screens */
+  margin: 10px;
+  cursor: pointer;
+  transition: transform 0.3s ease; /* Smooth hover effect */
+}
+
+.category img {
+  width: 120px; /* Adjust the size if needed */
+  height: 120px; /* Adjust the size if needed */
+  border: 4px solid black;
+  border-radius: 50%; /* Make the image circular */
+  overflow: hidden; /* Ensure the image stays within the circular border */
+}
+
+.category p {
+  font-size: 20px;
+}
+
+.category:hover {
+  transform: scale(1.05); /* Scale up on hover */
+}
+
+.close {
+  color: #fff;
+  float: right;
+  width: 30px;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: var(--primary-color);
+  text-decoration: none;
+  cursor: pointer;
+}
+
+h1, p {
+  color: #333;
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--primary-color); /* Orange background for navbar */
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Shadow at the bottom */
+}
+
+.navbar-light .navbar-brand,
+.navbar-light .navbar-nav .nav-link {
+  color: #fff; /* White text color for navbar links */
+  font-weight: bold;
+}
+
+.navbar-brand {
+  font-size: 24px;
+}
+
+.footer {
+  background-color: var(--primary-color); /* Orange background for footer */
+  color: #333; /* White text color for contrast */
+  padding: 20px 0;
+}
+
+.footer span {
+  font-size: 18px;
+}
+
+/*.text-muted {
+  color: #fff;
+}*/
+
+/* Modal content styles */
+.modal {
+  display: none;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: rgba(0, 0, 0, 0.6); /* White background color */
+  position: fixed; /* Position the modal content */
+  top: 50%; /* Align the top edge of the modal at 50% from the top of the viewport */
+  left: 50%; /* Align the left edge of the modal at 50% from the left of the viewport */
+  transform: translate(-50%, -50%); /* Center the modal content horizontally and vertically */
+  padding: 30px; /* Add padding */
+  border-radius: 10px; /* Rounded corners */
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add box shadow */
+  width: 80%; /* Set width to 80% of the viewport width */
+  max-height: 90vh; /* Set maximum height to 100% of the viewport height */
+  Color: #fff
+}
+
+.menu-content {
+  overflow-y: auto; /* Enable vertical scrollbar when content overflows */
+}
+
+/* Style the scrollbar for model */
+.menu-content::-webkit-scrollbar {
+  width: 6px; /* Set the width of the scrollbar */
+}
+
+/* Track styles */
+.menu-content::-webkit-scrollbar-track {
+  background: #f1f1f1; /* Background color of the track */
+}
+
+/* Handle styles */
+.menu-content::-webkit-scrollbar-thumb {
+  background: #888; /* Color of the scrollbar handle */
+  border-radius: 3px; /* Rounded corners of the scrollbar handle */
+}
+
+/* Handle on hover */
+.menu-content::-webkit-scrollbar-thumb:hover {
+  background: var(--primary-color); /* Change color of scrollbar handle on hover */
+}
+
+
+/* Modal header styles */
+.model-heading {
+  margin-top: 10px; /* Add padding */
 }
 
 .menu-item {
-    display: none;
-    justify-content: space-between;
-    padding: .5rem 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  padding-right: 20px;
+  border-bottom: 1px solid #fff;
+  width: 100%;
 }
 
-.price {
-    font-weight: bold;
+.menu-item:hover {
+  background-color: rgba(255, 165, 0, 0.8);
+  padding-left: 10px;
+  padding-right: 30px;
 }
 
-.hidden {
-    display: flex;
+.menu-item-name {
+  align-items: flex-start;
 }
 
-.toggle-button {
-    background: none;
-    border: none;
-    color: #ffd700; /* Gold color to match the headings */
-    font-size: 1.5em; /* Adjust the size as needed */
-    cursor: pointer;
+.menu-item-price {
+  align-items: flex-end;
+  margin-right: 10px; /* Add some spacing between name and price */
 }
 
-.menu-title.mb-3 {
-    margin-bottom: 1rem; /* Adjust as needed */
+.menu-item-name,
+.menu-item-price {
+  flex-basis: 50%; /* Divide menu item into equal halves */
+  font-size: 18px;
 }
 
-.menu-category .toggle-button {
-    transition: transform 0.3s ease; /* Smooth transition for the transform */
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .category img {
+    width: 150px;
+    height: 120px;
+  }
+
+  .modal-content {
+    width: 90%;
+  }
 }
 
-.menu-category .toggle-button.closed {
-    transform: rotate(-180deg); /* Arrow points up when menu is closed */
+@media (min-width: 768px) {
+  .category {
+    width: calc(25% - 20px); /* Four categories per row on larger screens */
+  }
+  
+  .menu-content {
+	margin: 10px;
+    padding-left: 20px;
+	padding-right: 20px;
+  }
 }
