@@ -1,108 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Palleturi Vindhu Restaurant Menu</title>
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>&#x1F374; Palleturi Vindhu</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" href="fast-food.png" type="image/x-icon">
 </head>
 <body>
-    <div class="container py-5">
-        <div class="menu">
-            <h1 class="text-center mb-4">PALLETURI VINDHU</h1>
-			<h3 class="text-center mb-4">Menu Items</h3>
-            <div class="tiffins mb-4">
-                <h2 class="menu-title mb-3 d-flex justify-content-between align-items-center">
-					TIFFINS
-					<button class="toggle-button">▼</button> <!-- Down arrow to show the menu is open -->
-				</h2>
-                <div class="menu-item">Plain Dosa <span class="price">₹40.00</span></div>
-                <div class="menu-item">Karam Dosa <span class="price">₹45.00</span></div>
-                <div class="menu-item">Masala Dosa <span class="price">₹50.00</span></div>
-                <div class="menu-item">Onion Dosa <span class="price">₹60.00</span></div>
-                <div class="menu-item">Ghee Dosa <span class="price">₹60.00</span></div>
-                <div class="menu-item">Ghee Karam Dosa <span class="price">₹65.00</span></div>
-                <div class="menu-item">Ghee Masala Dosa <span class="price">₹70.00</span></div>
-                <div class="menu-item">Ghee Onion Dosa <span class="price">₹80.00</span></div>
-                <div class="menu-item">Idli <span class="price">₹40.00</span></div>
-                <div class="menu-item">Idli Sambar <span class="price">₹45.00</span></div>
-                <div class="menu-item">Poori <span class="price">₹60.00</span></div>
-                <div class="menu-item">Bajji <span class="price">₹30.00</span></div>
-                <div class="menu-item">Uggani Bajji <span class="price">₹50.00</span></div>
-            </div>
-            
-            <div class="ice-cream mb-4">
-				<h2 class="menu-title mb-3 d-flex justify-content-between align-items-center">
-					ICE CREAM - CONES
-					<button class="toggle-button">▼</button> <!-- Down arrow to show the menu is open -->
-				</h2>
-                <div class="menu-item">Pista <span class="price">₹0.00</span></div>
-                <div class="menu-item">Strawberry <span class="price">₹0.00</span></div>
-                <div class="menu-item">Chocolate <span class="price">₹0.00</span></div>
-                <div class="menu-item">ButterScotch <span class="price">₹0.00</span></div>
-                <div class="menu-item">Kulfi Stick <span class="price">₹0.00</span></div>
-                <div class="menu-item">Fruit Biscuit <span class="price">₹0.00</span></div>
-                <div class="menu-item">Belgium Dark Chocolate <span class="price">₹0.00</span></div>
-                <div class="menu-item">Black Current <span class="price">₹0.00</span></div>
-            </div>
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <div class="container">
+      <a class="navbar-brand" href="#">Palleturi Vindhu</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-            <div class="ice-cream">
-				<h2 class="menu-title mb-3 d-flex justify-content-between align-items-center">
-					ICE CREAM - SCOOPS
-					<button class="toggle-button">▼</button> <!-- Down arrow to show the menu is open -->
-				</h2>
-                <div class="menu-item">Vanilla <span class="price">₹50.00</span></div>
-                <div class="menu-item">Strawberry <span class="price">₹50.00</span></div>
-                <div class="menu-item">ButterScotch <span class="price">₹60.00</span></div>
-                <div class="menu-item">Caramel Nuts <span class="price">₹80.00</span></div>
-                <div class="menu-item">Black Current <span class="price">₹90.00</span></div>
-                <div class="menu-item">Dry Fruits Temptation <span class="price">₹90.00</span></div>
-                <div class="menu-item">Belgium Dark Chocolate <span class="price">₹100.00</span></div>
-            </div>
-			
-			<div class="fresh-juices">
-				<h2 class="menu-title mb-3 d-flex justify-content-between align-items-center">
-					FRESH JUICES
-					<button class="toggle-button">▼</button> <!-- Down arrow to show the menu is open -->
-				</h2>
-                <div class="menu-item">COCONUT <span class="price">₹0.00</span></div>
-                <div class="menu-item">LEMON SODA (SWEET & SALT) <span class="price">₹0.00</span></div>
-                <div class="menu-item">NANNARI <span class="price">₹0.00</span></div>
-                <div class="menu-item">MOSAMBI <span class="price">₹0.00</span></div>
-                <div class="menu-item">MUSKMELON <span class="price">₹0.00</span></div>
-                <div class="menu-item">WATERMELON <span class="price">₹0.00</span></div>
-                <div class="menu-item">GRAPE <span class="price">₹0.00</span></div>
-				<div class="menu-item">SAPOTA <span class="price">₹0.00</span></div>
-            </div>
-			
-			<div class="mocktails">
-				<h2 class="menu-title mb-3 d-flex justify-content-between align-items-center">
-					MOCKTAILS
-					<button class="toggle-button">▼</button> <!-- Down arrow to show the menu is open -->
-				</h2>
-                <div class="menu-item">MOJITO <span class="price">₹0.00</span></div>
-				<div class="menu-item">BLUE CURACOO <span class="price">₹0.00</span></div>
-				<div class="menu-item">RED CURACOO <span class="price">₹0.00</span></div>
-				<div class="menu-item">LEMON TWIST <span class="price">₹0.00</span></div>
-				<div class="menu-item">GINGER & LIME <span class="price">₹0.00</span></div>
-				<div class="menu-item">KALA KHATTA <span class="price">₹0.00</span></div>
-				<div class="menu-item">ORANGE <span class="price">₹0.00</span></div>
-				<div class="menu-item">GREEN APPLE <span class="price">₹0.00</span></div>
-				<div class="menu-item">WATERMELON <span class="price">₹0.00</span></div>
-				<div class="menu-item">STRAWBERRY <span class="price">₹0.00</span></div>
-            </div>
-        </div>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <!-- <li class="nav-item">
+            <a class="nav-link" href="#">About</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contact</a>
+          </li> -->
+        </ul>
+      </div>
     </div>
-	
-	<footer class="text-center py-3">
-		<p>&copy; 2024 Palleturi Vindhu. All rights reserved.</p>
-	</footer>
+  </nav>
 
+  <div class="container">
+    <h1>Welcome to Palleturi Vindhu</h1>
+    <p>Please click on a category to see the menu.</p> <!-- Note added here -->
+    <div class="categories">
+      <div class="category" onclick="showMenu('tiffins')">
+        <img src="dosa.png" alt="tiffins">
+        <p>Tiffins</p>
+      </div>
+	  <div class="category" onclick="showMenu('snacks')">
+        <img src="snacks.png" alt="snacks">
+        <p>Snacks</p>
+      </div>
+	  <div class="category" onclick="showMenu('coffee')">
+        <img src="irani-chai.jpg" alt="coffee">
+        <p>Coffee/Tea</p>
+      </div>
+	  <div class="category" onclick="showMenu('juices')">
+        <img src="watermelonJuice.png" alt="juices">
+        <p>Fresh Juices</p>
+      </div>
+	  <div class="category" onclick="showMenu('mocktails')">
+        <img src="mocktails.png" alt="mocktails">
+        <p>Mocktails</p>
+      </div>
+	  <div class="category" onclick="showMenu('cones')">
+        <img src="cones.png" alt="cones">
+        <p>Ice Cream - Cones</p>
+      </div>
+	  <div class="category" onclick="showMenu('scoops')">
+        <img src="scoops.png" alt="scoops">
+        <p>Ice Cream - Scoops</p>
+      </div>
+      <!-- Add more categories as needed -->
+    </div>
+  </div>
 
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.4.2/dist/umd/popper.min.js"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-    <script src="script.js"></script>
+  <div id="menuModal" class="modal">
+    <div class="modal-content">
+      <div>
+	    <span class="close" onclick="closeMenu()">&times;</span>
+	    <h2 id="modelHeading" class="model-heading"></h2> <!-- Add a heading for the category name -->
+	  </div>
+      <div id="menuContent" class="menu-content"></div>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <footer class="footer mt-auto py-3">
+    <div class="container">
+      <!-- <span class="text-muted">© 2024 Palleturi Vindhu. All rights reserved.</span> -->
+	  <span>© 2024 Palleturi Vindhu.</span>
+    </div>
+  </footer>
+
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <script src="script.js"></script>
 </body>
 </html>
