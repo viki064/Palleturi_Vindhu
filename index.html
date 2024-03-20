@@ -1,104 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-M046JXVV35"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <head>
+    <!-- Google tag (gtag.js) -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-M046JXVV35"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
-  gtag('config', 'G-M046JXVV35');
-</script>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>&#x1F374; Palleturi Vindhu</title>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
-  <link rel="stylesheet" href="./css/styles.css">
-  <link rel="icon" href="./images/fast-food.png" type="image/x-icon">
-</head>
-<body>
-  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      gtag("config", "G-M046JXVV35");
+    </script>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>&#x1F374; Palleturi Vindhu</title>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <link rel="icon" href="./images/fast-food.png" type="image/x-icon" />
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="./index.html">Palleturi Vindhu</a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="./index.html">
+                Home
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="./feedback.html"> Feedback Form </a>
+            </li>
+            <!-- <li class="nav-item">
+              <a class="nav-link" href="#">Contact</a>
+            </li> -->
+          </ul>
+        </div>
+      </div>
+    </nav>
+
     <div class="container">
-      <a class="navbar-brand" href="#">Palleturi Vindhu</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <li class="nav-item active">
-            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-          </li>
-          <!-- <li class="nav-item">
-            <a class="nav-link" href="#">About</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="#">Contact</a>
-          </li> -->
-        </ul>
+      <h1>Welcome to Palleturi Vindhu</h1>
+      <p>Please click on a category to see the menu.</p>
+      <!-- Note added here -->
+      <div class="categories">
+        <div class="category" onclick="showMenu('tiffins')">
+          <img src="./images/dosa.png" alt="tiffins" />
+          <p>Tiffins</p>
+        </div>
+        <div class="category" onclick="showMenu('snacks')">
+          <img src="./images/snacks.png" alt="snacks" />
+          <p>Snacks</p>
+        </div>
+        <div class="category" onclick="showMenu('coffee')">
+          <img src="./images/irani-chai.jpg" alt="coffee" />
+          <p>Coffee/Tea</p>
+        </div>
+        <div class="category" onclick="showMenu('juices')">
+          <img src="./images/watermelonJuice.png" alt="juices" />
+          <p>Fresh Juices</p>
+        </div>
+        <div class="category" onclick="showMenu('mocktails')">
+          <img src="./images/mocktails.png" alt="mocktails" />
+          <p>Mocktails</p>
+        </div>
+        <div class="category" onclick="showMenu('cones')">
+          <img src="./images/cones.png" alt="cones" />
+          <p>Ice Cream - Cones</p>
+        </div>
+        <div class="category" onclick="showMenu('scoops')">
+          <img src="./images/scoops.png" alt="scoops" />
+          <p>Ice Cream - Scoops</p>
+        </div>
+        <!-- Add more categories as needed -->
       </div>
     </div>
-  </nav>
 
-  <div class="container">
-    <h1>Welcome to Palleturi Vindhu</h1>
-    <p>Please click on a category to see the menu.</p> <!-- Note added here -->
-    <div class="categories">
-      <div class="category" onclick="showMenu('tiffins')">
-        <img src="./images/dosa.png" alt="tiffins">
-        <p>Tiffins</p>
+    <div id="menuModal" class="modal">
+      <div class="modal-content">
+        <div>
+          <span class="close" onclick="closeMenu()">&times;</span>
+          <h2 id="modelHeading" class="model-heading"></h2>
+          <!-- Add a heading for the category name -->
+        </div>
+        <div id="menuContent" class="menu-content"></div>
       </div>
-	  <div class="category" onclick="showMenu('snacks')">
-        <img src="./images/snacks.png" alt="snacks">
-        <p>Snacks</p>
-      </div>
-	  <div class="category" onclick="showMenu('coffee')">
-        <img src="./images/irani-chai.jpg" alt="coffee">
-        <p>Coffee/Tea</p>
-      </div>
-	  <div class="category" onclick="showMenu('juices')">
-        <img src="./images/watermelonJuice.png" alt="juices">
-        <p>Fresh Juices</p>
-      </div>
-	  <div class="category" onclick="showMenu('mocktails')">
-        <img src="./images/mocktails.png" alt="mocktails">
-        <p>Mocktails</p>
-      </div>
-	  <div class="category" onclick="showMenu('cones')">
-        <img src="./images/cones.png" alt="cones">
-        <p>Ice Cream - Cones</p>
-      </div>
-	  <div class="category" onclick="showMenu('scoops')">
-        <img src="./images/scoops.png" alt="scoops">
-        <p>Ice Cream - Scoops</p>
-      </div>
-      <!-- Add more categories as needed -->
     </div>
-  </div>
 
-  <div id="menuModal" class="modal">
-    <div class="modal-content">
-      <div>
-	    <span class="close" onclick="closeMenu()">&times;</span>
-	    <h2 id="modelHeading" class="model-heading"></h2> <!-- Add a heading for the category name -->
-	  </div>
-      <div id="menuContent" class="menu-content"></div>
-    </div>
-  </div>
+    <!-- Footer -->
+    <footer class="footer mt-auto py-3">
+      <div class="container">
+        <!-- <span class="text-muted">© 2024 Palleturi Vindhu. All rights reserved.</span> -->
+        <span>© 2024 Palleturi Vindhu.</span>
+        <span
+          >NH44, Bangalore Highway, Opp. Harmony City, Anantapur - 515002.</span
+        >
+      </div>
+    </footer>
 
-  <!-- Footer -->
-  <footer class="footer mt-auto py-3">
-    <div class="container">
-      <!-- <span class="text-muted">© 2024 Palleturi Vindhu. All rights reserved.</span> -->
-	  <span>© 2024 Palleturi Vindhu.</span>
-   <span>NH44, Bangalore Highway, Opp. Harmony City, Anantapur - 515002.</span>
-    </div>
-  </footer>
-
-  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
-  <script src="./js/script.js"></script>
-</body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.1/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
 </html>

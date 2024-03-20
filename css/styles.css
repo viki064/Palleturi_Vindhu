@@ -29,9 +29,10 @@ body::-webkit-scrollbar-thumb {
 
 /* Handle on hover */
 body::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color); /* Darker handle color on hover for interactivity */
+  background: var(
+    --primary-color
+  ); /* Darker handle color on hover for interactivity */
 }
-
 
 .container {
   text-align: center;
@@ -84,7 +85,8 @@ body::-webkit-scrollbar-thumb:hover {
   cursor: pointer;
 }
 
-h1, p {
+h1,
+p {
   color: #333;
 }
 
@@ -131,13 +133,16 @@ h1, p {
   position: fixed; /* Position the modal content */
   top: 50%; /* Align the top edge of the modal at 50% from the top of the viewport */
   left: 50%; /* Align the left edge of the modal at 50% from the left of the viewport */
-  transform: translate(-50%, -50%); /* Center the modal content horizontally and vertically */
+  transform: translate(
+    -50%,
+    -50%
+  ); /* Center the modal content horizontally and vertically */
   padding: 30px; /* Add padding */
   border-radius: 10px; /* Rounded corners */
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Add box shadow */
   width: 80%; /* Set width to 80% of the viewport width */
   max-height: 90vh; /* Set maximum height to 100% of the viewport height */
-  Color: #fff
+  color: #fff;
 }
 
 .menu-content {
@@ -162,9 +167,10 @@ h1, p {
 
 /* Handle on hover */
 .menu-content::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-color); /* Change color of scrollbar handle on hover */
+  background: var(
+    --primary-color
+  ); /* Change color of scrollbar handle on hover */
 }
-
 
 /* Modal header styles */
 .model-heading {
@@ -217,10 +223,17 @@ h1, p {
   .category {
     width: calc(25% - 20px); /* Four categories per row on larger screens */
   }
-  
+
   .menu-content {
-	margin: 10px;
+    margin: 10px;
     padding-left: 20px;
-	padding-right: 20px;
+    padding-right: 20px;
   }
+}
+
+.googleform {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: -10px;
 }
